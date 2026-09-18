@@ -1,0 +1,30 @@
+[book]
+title = "⚡ Apache Kafka Notes"
+authors = ["Chenoveko"]
+description = "Personal notes from a physician learning Apache Kafka"
+src = "src"  # the source files will be found in `root/my-src` instead of `root/src`
+language = "en"
+text-direction = "ltr"
+
+[rust]
+edition = "2024"   # the default edition for code blocks
+
+[build]
+build-dir = "book"                # the directory where the output is placed
+create-missing = true             # whether or not to create missing pages
+use-default-preprocessors = true  # use the default preprocessors
+extra-watch-dirs = []             # directories to watch for triggering builds
+
+[output.html]
+mathjax-support = false            # allows mathjax support for math equations
+
+[output.html.fold]
+enable = true     # whether or not to enable section folding
+level = 0         # the depth to start folding
+
+[output.html.playground]
+editable = false          # allows editing the source code
+copyable = true          # include the copy button for copying code snippets
+copy-js = true           # includes the JavaScript for the code editor
+line-numbers = false     # displays line numbers for editable code
+runnable = false          # displays a run button for rust code

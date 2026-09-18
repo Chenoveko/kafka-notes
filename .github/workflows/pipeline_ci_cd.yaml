@@ -1,0 +1,60 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: cargo test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use GH Actions setup-rust-toolchain@v2
+        uses: actions-rust-lang/setup-rust-toolchain@v2
+
+      - name: Output cargo version
+        run: cargo version
+
+  deploy:
+    name: Deploy mdBook on Github Pages 
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+      pages: write  
+      id-token: write 
+    steps:
+      - name: Use GH Actions checkout@v7
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Use GH Actions setup-rust-toolchain@v2
+        uses: actions-rust-lang/setup-rust-toolchain@v2
+
+      - name: Install mdbook with cargo
+        run: cargo install mdbook
+
+      - name: Output mdBook version
+        run: mdbook --version
+      
+      - name: Run mdBook tests
+        run: mdbook test
+      
+      - name: Clean artifacts before building
+        run: mdbook clean
+
+      - name: Build Book with mdBook
+        run: mdbook build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: 'book'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

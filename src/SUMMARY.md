@@ -9,10 +9,12 @@
     - [Kafka Theory](fundamentals/theory.md)
     - [Starting Kafka](fundamentals/starting.md)
     - [Kafka CLI](fundamentals/cli.md)
-    - [Kafka and Java 101](fundamentals/java.md)
+    - [Kafka Client Application](fundamentals/kafka_app.md)
+    - [Real World Application](fundamentals/real.md)
+    - [Advanced Topic Configuration](fundamentals/advanced.md)
 
-# Kafka Connect API
+# Kafka Connect 
 
-# Kafka Streams API for Data Processing
+# Kafka Streams 
 
 

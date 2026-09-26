@@ -1,0 +1,5 @@
+volumes:
+  kafka1-data:
+  kafka2-data:
+  prometheus-data:
+  grafana-data:

@@ -1,0 +1,6 @@
+include:
+  - networks_compose.yaml
+  - volumes_compose.yaml
+  - prometheus_compose.yaml
+  - grafana_compose.yaml
+  - brokers_compose.yaml

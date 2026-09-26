@@ -111,8 +111,8 @@ Behind the scenes, the ksqlDB webserver translates the SQL commands into a serie
 - About Data Verification -> **Schema Registry**
 
 ![s](../images/apichoose.jpg)
-## Real World Architectures and Case Studies
-### Partitions Count and Replication Factor
+## Real World Architectures & Use Cases
+### Partitions Count & Replication Factor
 - The most important parameters when creating a topic
 - They impact performance and durability of the system overall
 - It is best to get the parameters right the first time!
@@ -121,10 +121,5 @@ Behind the scenes, the ksqlDB webserver translates the SQL commands into a serie
 
 
 
-### Case Study
-- MovieFlix
-- GetTaxi
-- MySocialMedia
-- MyBank
-- Big Data Ingestion
-- Logging and Metrics Aggregation
+### Use Cases
+[Use Cases - Redpanda](https://www.redpanda.com/guides/kafka-use-cases)
